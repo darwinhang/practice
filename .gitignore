@@ -1,0 +1,2 @@
+# exclude C binaries
+bin/
