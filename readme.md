@@ -12,3 +12,5 @@ To learn C, I am slowly making my way through the C Programming Language, Second
 To learn functional programming, I am going through the Racket guides for now, and then maybe do some of the Project Euler stuff, but I probably will not. I am hoping that doing functional programming will help make me a better javascript developer. 
 
 Overall, I think it will make me a better programmer. Since I am trying to get better at SQL and NoSQL (basically MongoDB), I may add folders for those into the repo.
+
+After reading [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html), I may also have to add Go or Clojure, but that is after (if I ever understand) pointers and functional programming.
