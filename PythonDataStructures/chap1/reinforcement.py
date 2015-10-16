@@ -1,3 +1,4 @@
+# This Python file uses the following encoding: utf-8
 # Reinforcement section
 
 def is_multiple(n, m):
@@ -26,7 +27,7 @@ def is_even(k):
     >>> is_even(7)
     False
     """
-    return bin(k).endswith('0')
+    return k & 1 == 0
 
 def minmax(data):
     """R-1.3
@@ -95,6 +96,46 @@ def sum_odd_int_squares(n):
 # R-1.7 Give a single command that computes the sum from Exercise R-1.6, relying 
 # on Python's comprehension syntax and the built-in sum function.
 assert sum([i**2 for i in range(1,6,2)]) == 35, 'Your expression does not work' 
+
+
+# R-1.8 Python allows negative integers to be used as indices into a sequence, such as a string. 
+# If string s has length n, and expression s[k] is used for index −n ≤ k < 0, what is the
+# equivalent index j ≥ 0 such that s[j] references the same element?
+# j = len(s) - k
+
+
+# R-1.9 What parameters should be sent to the range constructor, to produce a range 
+# with values 50, 60, 70, 80?
+# range(50, 81, 10)
+
+
+# r-1.10 What parameters should be sent to the range constructor, to produce a range 
+# with values 8, 6, 4, 2, 0, −2, −4, −6, −8?
+# range(8, -9, -2)
+
+# r-1.11 Demonstrate how to use Python's list comprehension syntax to produce 
+# the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
+expected_list = [1, 2, 4, 8, 16, 32, 64, 128, 256]
+bit_position_value = [2 ** n for n in range(9)]
+assert expected_list == bit_position_value, 'Your generated list is wrong'
+
+
+def own_choice(seq):
+    """R-1.12
+    Python's random module includes a function choice(data) that returns a random element 
+    from a non-empty sequence. The random module includes a more basic function randrange, 
+    with parameterization similar to the built-in range function, that return a random choice 
+    from the given range. Using only the randrange function, implement your own version of 
+    the choice function.
+
+    >>> own_choice(expected_list) in expected_list
+    True
+    >>> own_choice(expected_list) == 1000
+    False
+    """
+    import random
+    return seq[random.randrange(0, len(seq))]
+
 
 
 ## TODO: Raise errors for edge cases
