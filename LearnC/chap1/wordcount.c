@@ -4,25 +4,32 @@
 #define OUT 0
 
 /* count lines, words, and chars in input */
-int main(){
-    int c, nl, nw, nc, state;
+int main()
+{
+  int c, nl, nw, nc, state;
 
-    // state originally set to 'outside a word'
-    state = OUT;
-    nl = nw = nc = 0;
+  // state originally set to 'outside a word'
+  state = OUT;
+  nl = nw = nc = 0;
 
-    while((c = getchar()) != EOF) {
-        ++nc;
-        if (c == '\n') {
-            ++nl;
-        }
-        if (c == ' ' || c == '\n' || c == '\t') {
-            state = OUT;
-        }
-        else {
-            state = IN;
-            ++nw;
-        }
-    } 
-    printf("%d %d %d\n", nl, nw, nc);
+  while((c = getchar()) != EOF) {
+    ++nc;
+    if (c == '\n') {
+      ++nl;
+    }
+    if (c == ' ' || c == '\n' || c == '\t') {
+      state = OUT;
+    }
+    else {
+      state = IN;
+      ++nw;
+    }
+  } 
+  printf("%d %d %d\n", nl, nw, nc);
 }
+
+/*
+ * Exercise 1-11. To test, should try, no input or empty file, files with
+ * different types of formatting, files with different encoding(?),
+ * very large inputs.
+ */
