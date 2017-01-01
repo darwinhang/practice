@@ -8,7 +8,8 @@ void copy(char to[], char from[]);
 // the '\0' is the null char, whose value is zero 
 
 /* print longest input line */
-int main(){
+int main()
+{
     int len;    /* current line length */
     int max;    /* maximum length seen so far */
     char line[MAXLINE];  /* current input line */

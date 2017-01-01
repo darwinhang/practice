@@ -4,8 +4,9 @@
 #define OUT 0
 
 
-/* program to print a histogram of word length in an input */
-int main(){
+/* Exercise 1-13. Program to print a histogram of word length in an input */
+int main()
+{
     int c, charcount, maxcount, i, j;
     charcount = maxcount = 0;
     int state = OUT;
